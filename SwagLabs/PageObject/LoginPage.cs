@@ -24,7 +24,7 @@ namespace SauceDemo.PageObject
         public override LoginPage OpenPage()
         {
             driver.Navigate().GoToUrl(url);
-            return this;  
+            return this;
         }
 
         public InventoryPage LoginAsStandartUser()
@@ -36,8 +36,7 @@ namespace SauceDemo.PageObject
             };
 
             TryToLogin(user);
-            //driver.FindElement(LoginButtom).Click(); - maybe this line was added in the lecture by mistake?
-
+            
             return new InventoryPage(driver);
         }
 

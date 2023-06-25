@@ -13,7 +13,7 @@ namespace SauceDemo.Test
         public void LoginStandartUser()
         {
             
-            var inventoryPage = new LoginPage(driver)
+            new LoginPage(driver)
                 .OpenPage()
                 .LoginAsStandartUser();
                         
