@@ -50,5 +50,10 @@ namespace SwagLabs.PageObject
             driver.FindElement(PostalCodeInput).SendKeys(customer.PostalCode);
             driver.FindElement(By.XPath("//*[@data-test='continue']")).Click();
         }
+
+        public void ContinueWithoutCustomerData()
+        {
+            driver.FindElement(By.XPath("//*[@data-test='continue']")).Click();
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace SauceDemo.Test
 
         public void GoBasePath()
         {
-            var inventoryPage = new LoginPage(driver)
+             new LoginPage(driver)
                 .OpenPage()
                 .LoginAsStandartUser()
                 .BuyProductAndGoToCart()
