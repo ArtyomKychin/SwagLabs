@@ -8,8 +8,10 @@ namespace SwagLabs.PageObject
     {
         private By ShoppingCartLink = By.ClassName("shopping_cart_link");
         private By AddBikeLight = By.XPath("//*[@data-test='add-to-cart-sauce-labs-bike-light']");
+        private By AddBackpack = By.XPath("//*[@data-test='add-to-cart-sauce-labs-backpack']");
         private By BmMenuButton = By.ClassName("bm-burger-button");
         private By LogoutButton = By.Id("logout_sidebar_link");      
+            
         
         public const string url = "https://www.saucedemo.com/inventory.html";
 
@@ -40,6 +42,14 @@ namespace SwagLabs.PageObject
         public void GoToLogout()
         {
             driver.FindElement(LogoutButton).Click();
-        }        
+        }
+                
+        public void AddProducts()
+        {
+            driver.FindElement(AddBikeLight).Click();
+            driver.FindElement(AddBackpack).Click();
+        }
+
+
     }
 }
